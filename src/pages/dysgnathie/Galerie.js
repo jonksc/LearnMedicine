@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
+import Modal from '../../components/UI/Modal';
 
 const Galerie = () => {
   const [mediaType, setMediaType] = useState('videos');
+  const [isOpenModal, setIsOpenModal] = useState(false);
+  const [title, setTitle] = useState();
 
   const changeMediaType = (event) => {
     setMediaType(event.target.value);
   };
 
-  const openModal = (event) => {
-    console.log(event.target.value);
+  const toggleModal = (event) => {
+    !isOpenModal && setTitle(event.target.value);
+    setIsOpenModal(!isOpenModal);
   };
 
   const videoTitles = ['Bilaterale sagittale split Osteotomie', 'Unterkieferrückverlagerung'];
@@ -28,7 +32,7 @@ const Galerie = () => {
           <>
             {videoTitles.map((videoTitle, index) =>
               <>
-                <button key={index} onClick={openModal} className="rounded-md px-2 py-1 bg-green-200 hover:bg-green-400 text-gray-800" value={videoTitle.toLowerCase().split(' ').join('')}>{videoTitle}</button>
+                <button key={index} onClick={toggleModal} className="rounded-md px-2 py-1 bg-green-200 hover:bg-green-400 text-gray-800" value={videoTitle}>{videoTitle}</button>
                 <img className="galleryPoster" src="thumbs/Play_experimentell.png" alt="" />
               </>)
             }
@@ -39,13 +43,19 @@ const Galerie = () => {
           <>
             {pictureTitles.map((pictureTitle, index) =>
               <>
-                <button key={index} onClick={openModal} className="rounded-md px-2 py-1 bg-green-200 hover:bg-green-400 text-gray-800" value={pictureTitle.toLowerCase().split(' ').join('')}>{pictureTitle}</button>
+                <button key={index} onClick={toggleModal} className="rounded-md px-2 py-1 bg-green-200 hover:bg-green-400 text-gray-800" value={pictureTitle}>{pictureTitle}</button>
                 <img className="galleryPoster" src="thumbs/Play_experimentell.png" alt="" />
               </>)
             }
           </>
         }
       </div>
+
+      <Modal
+        show={isOpenModal}
+        onClose={toggleModal}
+        title={title}
+      />
     </div>
   );
 };
