@@ -17,9 +17,17 @@ code {
 }
 
 .btn {
-  @apply px-2 py-1 bg-blue-500 text-white font-bold rounded
+  @apply px-2 py-1 font-bold rounded
 }
 
 .btn:hover {
   @apply bg-blue-700
+}
+
+.btn-blue {
+  @apply bg-blue-500 text-white
+}
+
+iframe {
+  aspect-ratio: 16 / 9;
 }

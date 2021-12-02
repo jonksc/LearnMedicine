@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Topbar from '../../components/UI/Topbar';
 import Galerie from './Galerie';
+import Lernziele from './Lernziele';
+import Quiz from './Quiz';
 
 const Grundlagen = () => {
   const [aspect, setAspect] = useState('grundlagen');
@@ -14,6 +16,8 @@ const Grundlagen = () => {
     setChapter(event.target.value);
   };
 
+  const chapters = ['Allgemeines', 'Ursachen', 'Dysgnathieformen', 'Folgen', 'Diagnostik', 'Therapie'];
+
   return (
     <div>
       <Topbar
@@ -26,12 +30,10 @@ const Grundlagen = () => {
           <p>Kapitel</p>
           <hr />
           <div className="flex flex-col items-start">
-            <button onClick={changeChapter} value="allgemeines">Allgemeines</button>
-            <button onClick={changeChapter} value="ursachen">Ursachen</button>
-            <button onClick={changeChapter} value="dysgnathieformen">Dysgnathieformen</button>
-            <button onClick={changeChapter} value="folgen">Folgen</button>
-            <button onClick={changeChapter} value="diagnostik">Diagnostik</button>
-            <button onClick={changeChapter} value="therapie">Therapie</button>
+            {
+              chapters.map((chapter, index) => 
+                <button key={index} onClick={changeChapter} value={chapter.toLowerCase()}>{chapter}</button>)
+            }
           </div>
         </div>
 
@@ -39,7 +41,7 @@ const Grundlagen = () => {
           {chapter === 'allgemeines' &&
           <>
             <h1>Allgemeines</h1>
-            <p>Unter dem Begriff &quot;Dysgnathie&quot; werden zusammenfassend die Fehlentwicklungen der Zähne, des Kiefers und des Kausystems beschrieben.</p>
+            <p>Unter dem Begriff "Dysgnathie" werden zusammenfassend die Fehlentwicklungen der Zähne, des Kiefers und des Kausystems beschrieben.</p>
           </>}
           {chapter === 'ursachen' &&
           <>
@@ -49,8 +51,17 @@ const Grundlagen = () => {
         </div>
       </div>
       }
+
       {aspect === 'galerie' &&
         <Galerie />
+      }
+
+      {aspect === 'quiz' &&
+        <Quiz />
+      }
+
+      {aspect === 'lernziele' &&
+        <Lernziele />
       }
     </div>
   );
