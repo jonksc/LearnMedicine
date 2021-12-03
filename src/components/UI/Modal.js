@@ -2,9 +2,10 @@ import React, { Fragment, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import { Dialog, Transition } from '@headlessui/react';
 import { VideoCameraIcon } from '@heroicons/react/outline';
+import VideoPlayer from '../VideoPlayer/VideoPlayer';
 
 // eslint-disable-next-line react/prop-types
-function Modal({ show, onClose, title }) {
+function Modal({ show, onClose, title, url }) {
 
   const cancelButtonRef = useRef(null);
 
@@ -51,6 +52,9 @@ function Modal({ show, onClose, title }) {
                       <p className="text-sm text-gray-500">
                         --- {title} video here ---
                       </p>
+                      <VideoPlayer
+                        url={url}
+                      />
                     </div>
                   </div>
                 </div>

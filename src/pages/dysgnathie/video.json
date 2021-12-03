@@ -1,0 +1,293 @@
+{
+    "videos": [
+        {
+            "name": "Doppelseitige LKG-Spalte",
+            "id": 0,
+            "host": "wms-avmz.klinikum.rwth-aachen.de",
+            "port": "443",
+            "path": "mkg",
+            "type": "mp4",
+            "file": "lkg_doppelseitige_spalte.mp4",
+            "playbutton_poster": "avmzplayer/assets/Play_experimentell.png",
+            "poster": "dysgnathie/images/video0.png",
+            "cuepoints" : [
+                {
+                    "id": 0,
+                    "time": 6,
+                    "duration": 0,
+                    "caption": "Einleitung"
+                },
+                {
+                    "id": 1,
+                    "time": 63,
+                    "duration": 0,
+                    "caption": "OP"
+                }
+            ]
+        },
+        {
+          "name": "Einseitige LKG-Spalte",
+          "id": 1,
+          "host": "wms-avmz.klinikum.rwth-aachen.de",
+          "port": "443",
+          "path": "mkg",
+          "type": "mp4",
+          "file": "lkg_einseitige_spalte.mp4",
+          "playbutton_poster": "avmzplayer/assets/Play_experimentell.png",
+          "poster": "dysgnathie/images/video1.png",
+          "cuepoints" : [
+            {
+              "id": 0,
+              "time": 4,
+              "duration": 0,
+              "caption": "Einleitung"
+            },
+            {
+              "id": 1,
+              "time": 165,
+              "duration": 0,
+              "caption": "OP"
+            }
+          ]
+        },
+        {
+            "name": "Kieferspaltosteoplastik",
+            "id": 2,
+            "host": "wms-avmz.klinikum.rwth-aachen.de",
+            "port": "443",
+            "path": "mkg",
+            "type": "mp4",
+            "file": "lkg_kieferspaltosteoplastik.mp4",
+            "playbutton_poster": "avmzplayer/assets/Play_experimentell.png",
+            "poster": "dysgnathie/images/video2.png",
+            "cuepoints" : [
+                {
+                    "id": 0,
+                    "time": 4,
+                    "duration": 0,
+                    "caption": "OP"
+                },
+                {
+                    "id": 1,
+                    "time": 76,
+                    "duration": 0,
+                    "caption": "Becken"
+                },
+                {
+                    "id": 2,
+                    "time": 174,
+                    "duration": 0,
+                    "caption": "Kiefer"
+                }
+            ]
+        },
+        {
+            "name": "Gaumenverschluss",
+            "id": 3,
+            "host": "wms-avmz.klinikum.rwth-aachen.de",
+            "port": "443",
+            "path": "mkg",
+            "type": "mp4",
+            "file": "lkg_gaumenverschluss.mp4",
+            "playbutton_poster": "avmzplayer/assets/Play_experimentell.png",
+            "poster": "dysgnathie/images/video3.png",
+            "cuepoints" : [
+                {
+                    "id": 0,
+                    "time": 4,
+                    "duration": 0,
+                    "caption": "Einleitung"
+                },
+                {
+                    "id": 1,
+                    "time": 51,
+                    "duration": 0,
+                    "caption": "OP"
+                }
+            ]
+        },
+        {
+            "name": "Gaumenverschluss doppelseitige LKG-Spalte",
+            "id": 4,
+            "host": "wms-avmz.klinikum.rwth-aachen.de",
+            "port": "443",
+            "path": "mkg",
+            "type": "mp4",
+            "file": "lkg_gaumenverschluss_doppelseitige_spalte.mp4",
+            "playbutton_poster": "avmzplayer/assets/Play_experimentell.png",
+            "poster": "dysgnathie/images/video4.png",
+            "cuepoints" : [
+                {
+                    "id": 0,
+                    "time": 4,
+                    "duration": 0,
+                    "caption": "Einleitung"
+                },
+                {
+                    "id": 1,
+                    "time": 21,
+                    "duration": 0,
+                    "caption": "OP"
+                }
+            ]
+        },
+        {
+            "name": "Kollumfraktur",
+            "id": 5,
+            "host": "wms-avmz.klinikum.rwth-aachen.de",
+            "port": "443",
+            "path": "mkg",
+            "type": "mp4",
+            "file": "kollumfraktur.mp4",
+            "playbutton_poster": "avmzplayer/assets/Play_experimentell.png",
+            "poster": "dysgnathie/images/video5.png",
+            "cuepoints" : [
+                {
+                    "id": 0,
+                    "time": 5,
+                    "duration": 0,
+                    "caption": "Einleitung"
+                },
+                {
+                    "id": 1,
+                    "time": 81,
+                    "duration": 0,
+                    "caption": "OP"
+                }
+            ]
+        },
+        {
+            "name": "Jochbeinfraktur",
+            "id": 6,
+            "host": "wms-avmz.klinikum.rwth-aachen.de",
+            "port": "443",
+            "path": "mkg",
+            "type": "mp4",
+            "file": "jochbeinfraktur.mp4",
+            "playbutton_poster": "avmzplayer/assets/Play_experimentell.png",
+            "poster": "dysgnathie/images/video6.png",
+            "cuepoints" : [
+                {
+                    "id": 0,
+                    "time": 4,
+                    "duration": 0,
+                    "caption": "Einleitung"
+                },
+                {
+                    "id": 1,
+                    "time": 30,
+                    "duration": 0,
+                    "caption": "OP"
+                }
+            ]
+        },
+        {
+            "name": "Bilaterale sagittale split Osteotomie",
+            "id": 7,
+            "host": "wms-avmz.klinikum.rwth-aachen.de",
+            "port": "443",
+            "path": "mkg",
+            "type": "mp4",
+            "file": "bsso.mp4",
+            "playbutton_poster": "avmzplayer/assets/Play_experimentell.png",
+            "poster": "dysgnathie/images/video7.png",
+            "cuepoints" : [
+                {
+                    "id": 0,
+                    "time": 4,
+                    "duration": 0,
+                    "caption": "Einleitung"
+                },
+                {
+                    "id": 1,
+                    "time": 98,
+                    "duration": 0,
+                    "caption": "OP"
+                }
+            ]
+        },
+        {
+            "name": "Beckenkammtransplantat",
+            "id": 8,
+            "host": "wms-avmz.klinikum.rwth-aachen.de",
+            "port": "443",
+            "path": "mkg",
+            "type": "mp4",
+            "file": "beckenkammtransplantat.mp4",
+            "playbutton_poster": "avmzplayer/assets/Play_experimentell.png",
+            "poster": "dysgnathie/images/video8.png",
+            "cuepoints" : [
+                {
+                    "id": 0,
+                    "time": 4,
+                    "duration": 0,
+                    "caption": "Einleitung"
+                },
+                {
+                    "id": 1,
+                    "time": 141,
+                    "duration": 0,
+                    "caption": "OP"
+                },
+                {
+                    "id": 2,
+                    "time": 481,
+                    "duration": 0,
+                    "caption": "Mikrochirurgischer Anschluss"
+                }
+            ]
+        },
+        {
+            "name": "Zyste",
+            "id": 9,
+            "host": "wms-avmz.klinikum.rwth-aachen.de",
+            "port": "443",
+            "path": "mkg",
+            "type": "mp4",
+            "file": "zyste.mp4",
+            "playbutton_poster": "avmzplayer/assets/Play_experimentell.png",
+            "poster": "dysgnathie/images/video9.png",
+            "cuepoints" : [
+                {
+                    "id": 0,
+                    "time": 4,
+                    "duration": 0,
+                    "caption": "Einleitung"
+                },
+                {
+                    "id": 1,
+                    "time": 93,
+                    "duration": 0,
+                    "caption": "OP"
+                }
+            ]
+        },
+        {
+            "name": "Unterkieferrückverlagerung",
+            "id": 10,
+            "host": "wms-avmz.klinikum.rwth-aachen.de",
+            "port": "443",
+            "path": "mkg",
+            "type": "mp4",
+            "file": "ukrueck2.mp4",
+            "playbutton_poster": "avmzplayer/assets/Play_experimentell.png",
+            "poster": "dysgnathie/images/video10.png",
+            "cuepoints" : [
+                {
+                    "id": 0,
+                    "time": 4,
+                    "duration": 0,
+                    "caption": "Einleitung"
+                },
+                {
+                    "id": 1,
+                    "time": 69,
+                    "duration": 0,
+                    "caption": "OP"
+                }
+            ]
+        }
+        
+        
+    ]
+}

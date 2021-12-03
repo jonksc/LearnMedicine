@@ -1,21 +1,38 @@
 import React, { useState } from 'react';
 import Modal from '../../components/UI/Modal';
+import data from './video.json';
 
 const Galerie = () => {
   const [mediaType, setMediaType] = useState('videos');
   const [isOpenModal, setIsOpenModal] = useState(false);
   const [title, setTitle] = useState();
+  const [url, setUrl] = useState('');
 
   const changeMediaType = (event) => {
     setMediaType(event.target.value);
   };
 
   const toggleModal = (event) => {
-    !isOpenModal && setTitle(event.target.value);
+    !isOpenModal && setTitle(event.target.innerText);
+    !isOpenModal && setUrl(event.target.value);
     setIsOpenModal(!isOpenModal);
   };
 
-  const videoTitles = ['Bilaterale sagittale split Osteotomie', 'Unterkieferrückverlagerung'];
+  const videoData = data.videos.map((video) => {
+    return { 
+      title: video.name, 
+      url: `https://wms01-avmz.germanywestcentral.cloudapp.azure.com/mkg/_definst/mp4:${video.file}/playlist.m3u8`
+    };
+  });
+
+  // const urls = data.videos.map((video) => {
+  //   // eslint-disable-next-line quotes
+  //   return `https://wms01-avmz.germanywestcentral.cloudapp.azure.com/mkg/_definst/mp4:${video.file}/playlist.m3u8`;
+  // });
+
+  console.log(videoData);
+
+  // const videoTitles = ['Bilaterale sagittale split Osteotomie', 'Unterkieferrückverlagerung'];
 
   const pictureTitles = ['Distalbisslage', 'Mesialbisslage'];
 
@@ -27,13 +44,12 @@ const Galerie = () => {
       </div>
 
       
-      <div className="flex gap-5">
+      <div className="grid-magic">
         {mediaType === 'videos' && 
           <>
-            {videoTitles.map((videoTitle, index) =>
+            {videoData.map((video, index) =>
               <>
-                <button key={index} onClick={toggleModal} className="rounded-md px-2 py-1 bg-green-200 hover:bg-green-400 text-gray-800" value={videoTitle}>{videoTitle}</button>
-                <img className="galleryPoster" src="thumbs/Play_experimentell.png" alt="" />
+                <button key={index} onClick={toggleModal} className="rounded-md px-2 py-2 bg-green-200 hover:bg-green-400 text-gray-800" value={video.url}>{video.title}</button>
               </>)
             }
           </>
@@ -55,6 +71,7 @@ const Galerie = () => {
         show={isOpenModal}
         onClose={toggleModal}
         title={title}
+        url={url}
       />
     </div>
   );
