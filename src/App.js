@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
       <Navbar />
-      <div className="max-w-6xl mx-auto px-20">
+      <div className="max-w-5xl mx-auto px-5">
         {topic === 'dysgnathie' && <Dysgnathie />}
       </div>
     </div>

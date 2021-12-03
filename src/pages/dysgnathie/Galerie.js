@@ -60,7 +60,6 @@ const Galerie = () => {
             {pictureTitles.map((pictureTitle, index) =>
               <>
                 <button key={index} onClick={toggleModal} className="rounded-md px-2 py-1 bg-green-200 hover:bg-green-400 text-gray-800" value={pictureTitle}>{pictureTitle}</button>
-                <img className="galleryPoster" src="thumbs/Play_experimentell.png" alt="" />
               </>)
             }
           </>
