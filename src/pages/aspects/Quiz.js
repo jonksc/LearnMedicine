@@ -1,0 +1,43 @@
+/* eslint-disable react/prop-types */
+import React, { useState } from 'react';
+
+const Quiz = ({ quizzes }) => {
+  const [quizType, setQuizType] = useState('');
+
+  const changeQuizType = (event) => {
+    setQuizType(event.target.value);
+  };
+
+  console.log(!quizType);
+
+  return (
+    <div>
+      <div className="mb-2 text-xl">
+        <p>Quiz waehlen:</p>
+      </div>
+      <div>
+        {
+          quizzes.map((quiz, index) => {
+            return (
+              <button key={index} onClick={changeQuizType} type="button" value={quiz.type} className="btn bg-green-500 hover:bg-green-700 text-white mr-2">
+                {quiz.type}
+              </button>
+            );
+          })
+        }
+      </div>
+
+      {
+        quizzes.filter(quiz => quizType === quiz.type).map((quiz, index) => {
+          return (
+            <div key={index}>
+              <iframe width="100%" name={quiz.type} frameBorder="0" src={quiz.src}></iframe>
+            </div>
+          );
+        })
+      }
+    </div>
+  );
+};
+
+export default Quiz;

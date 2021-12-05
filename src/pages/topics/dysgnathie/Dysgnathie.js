@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import Topbar from '../../components/UI/Topbar';
-import Grundlagen from './Grundlagen';
-import Galerie from './Galerie';
-import Lernziele from './Lernziele';
-import Quiz from './Quiz';
+import Topbar from '../../../components/UI/Topbar';
+import Grundlagen from '../../aspects/Grundlagen';
+import Galerie from '../../aspects/Galerie';
+import Lernziele from '../../aspects/Lernziele';
+import Quiz from '../../aspects/Quiz';
 import videoData from './video.json';
 
 const Dysgnathie = () => {

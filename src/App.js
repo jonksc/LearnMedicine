@@ -1,8 +1,8 @@
 import React from 'react';
 import Navbar from './components/UI/Navbar';
-import Dysgnathie from './pages/dysgnathie/Dysgnathie';
+import Dysgnathie from './pages/topics/dysgnathie/Dysgnathie';
 import { useStore } from './Context';
-import Lkg from './pages/Lkg';
+import Lkg from './pages/topics/lkg/Lkg';
 
 function App() {
   const { topic } = useStore();
