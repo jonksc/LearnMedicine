@@ -1,13 +1,8 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
-import { useStore } from '../../Context';
 import { DocumentTextIcon } from '@heroicons/react/outline';
 
-const Navbar = () => {
-  const { topic, setTopic } = useStore();
-
-  const changeTopic = (event) => {
-    setTopic(event.target.value);
-  };
+const Navbar = ({ topic, changeTopic }) => {
 
   return (
     <nav className="bg-gray-300 mb-3">
