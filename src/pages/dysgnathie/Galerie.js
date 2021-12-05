@@ -1,8 +1,8 @@
+/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import Modal from '../../components/UI/Modal';
-import data from './video.json';
 
-const Galerie = () => {
+const Galerie = ({ data }) => {
   const [mediaType, setMediaType] = useState('videos');
   const [isOpenModal, setIsOpenModal] = useState(false);
   const [title, setTitle] = useState();

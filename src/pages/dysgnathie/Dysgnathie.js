@@ -4,6 +4,7 @@ import Grundlagen from './Grundlagen';
 import Galerie from './Galerie';
 import Lernziele from './Lernziele';
 import Quiz from './Quiz';
+import videoData from './video.json';
 
 const Dysgnathie = () => {
   const [aspect, setAspect] = useState('grundlagen');
@@ -23,6 +24,39 @@ const Dysgnathie = () => {
     }
   ];
 
+  const quizzes = [
+    {
+      type: 'Allgemein',
+      src: 'dysgnathie/quiz/allgemein/index.html'
+    },
+    {
+      type: 'Referenzlinien',
+      src: 'dysgnathie/quiz/referenzlinien/quizskelettale%20(Web)/index.html'
+    },
+    {
+      type: 'Referenzpunkte',
+      src: 'dysgnathie/quiz/skelettale/quizskelettale%20(Web)/index.html'
+    },
+    {
+      type: 'Weichgewebeanalyse',
+      src: 'dysgnathie/quiz/weichgewebeanalyse/quizweich%20(Web)/index.html'
+    }
+  ];
+
+  const lernziele = 
+  <tbody>
+    <tr><th>Kategorie</th><th>Lernzielbeschreibung</th><th>Verb</th><th>Kompetenzniveau</th><th>Literatur</th></tr>
+    <tr><td>Grundlage</td><td>Der Studierende soll die Ursachen der Dysgnathien</td><td>erklären</td><td>kognitiv</td><td>"Zahn-, Mund und Kieferheilkunde" Schwenzer, Ehrenfeld, Thieme Verlag</td></tr>
+    <tr><td>Grundlage</td><td>Der Studierende soll die Angle-Klassifikation</td><td>anwenden</td><td>psychomotorisch</td><td>"Zahn-, Mund und Kieferheilkunde" Schwenzer, Ehrenfeld, Thieme Verlag</td></tr>
+    <tr><td>Grundlage</td><td>Der Studierende soll die Klassifikation nach dem ANB-Winkel</td><td>anwenden</td><td>psychomotorisch</td><td>"Zahn-, Mund und Kieferheilkunde" Schwenzer, Ehrenfeld, Thieme Verlag</td></tr>
+    <tr><td>Grundlage</td><td>Der Studierende soll die Dysgnathieformen</td><td>benennen</td><td>kognitiv</td><td>"Zahn-, Mund und Kieferheilkunde" Schwenzer, Ehrenfeld, Thieme Verlag</td></tr>
+    <tr><td>Grundlage</td><td>Der Studierende soll Folgen der unbehandelten Dysgnathie</td><td>erklären</td><td>kognitiv</td><td>"Zahn-, Mund und Kieferheilkunde" Schwenzer, Ehrenfeld, Thieme Verlag</td></tr>
+    <tr><td>Diagnostik</td><td>Der Studierende soll die diagnostischen Möglichkeiten</td><td>erklären</td><td>kognitiv</td><td>"Zahn-, Mund und Kieferheilkunde" Schwenzer, Ehrenfeld, Thieme Verlag</td></tr>
+    <tr><td>Therapie</td><td>Der Studierende soll den Therapieplan einer Dysgnathie</td><td>erklären</td><td>kognitiv</td><td>"Zahn-, Mund und Kieferheilkunde" Schwenzer, Ehrenfeld, Thieme Verlag</td></tr>
+    <tr><td>Therapie</td><td>Der Studierende soll die allgemeinen Grundlagen der orthognathen Chirurgie</td><td>benennen</td><td>kognitiv</td><td>"Zahn-, Mund und Kieferheilkunde" Schwenzer, Ehrenfeld, Thieme Verlag</td></tr>
+    <tr><td>Therapie</td><td>Der Studierende soll die Grundlagen der chirurgischen Verfahren</td><td>erklären</td><td>kognitiv</td><td>"Zahn-, Mund und Kieferheilkunde" Schwenzer, Ehrenfeld, Thieme Verlag</td></tr>
+  </tbody>;
+
   return (
     <div>
       <Topbar
@@ -35,15 +69,21 @@ const Dysgnathie = () => {
         />
       }
       {aspect === 'galerie' &&
-        <Galerie />
+        <Galerie
+          data={videoData}
+        />
       }
 
       {aspect === 'quiz' &&
-        <Quiz />
+        <Quiz
+          quizzes={quizzes}
+        />
       }
 
       {aspect === 'lernziele' &&
-        <Lernziele />
+        <Lernziele
+          lernziele={lernziele}
+        />
       }
     </div>
   );

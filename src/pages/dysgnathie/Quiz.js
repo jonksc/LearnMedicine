@@ -1,11 +1,14 @@
+/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 
-const Quiz = () => {
+const Quiz = ({ quizzes }) => {
   const [quizType, setQuizType] = useState('');
 
   const changeQuizType = (event) => {
     setQuizType(event.target.value);
   };
+
+  console.log(!quizType);
 
   return (
     <div>
@@ -25,26 +28,17 @@ const Quiz = () => {
           </button>
         </div>
       </div>
-      
-      {
-        quizType === 'Allgemein' &&
-          <iframe width="100%" name="Allgemein" frameBorder="0" src="dysgnathie/quiz/allgemein/index.html"></iframe>
-      }
-      
-      {
-        quizType === 'Referenzlinien' &&
-          <iframe width="100%" name="Referenzlinien" frameBorder="0" src="dysgnathie/quiz/referenzlinien/quizskelettale%20(Web)/index.html"></iframe>
-      }
+
+      {!quizType && <p className="m-6 text-3xl">Quiz waehlen</p>}
 
       {
-        quizType === 'Referenzpunkte' &&
-          <iframe width="100%" name="Referenzpunkte" frameBorder="0" src="dysgnathie/quiz/skelettale/quizskelettale%20(Web)/index.html"></iframe>
-      }
-
-      {
-        quizType === 'Weichgewebeanalyse' &&
-          <iframe width="100%" name="Weichgewebeanalyse" frameBorder="0"
-            src="dysgnathie/quiz/weichgewebeanalyse/quizweich%20(Web)/index.html"></iframe>
+        quizzes.filter(quiz => quizType === quiz.type).map((quiz, index) => {
+          return (
+            <div key={index}>
+              <iframe width="100%" name={quiz.type} frameBorder="0" src={quiz.src}></iframe>
+            </div>
+          );
+        })
       }
     </div>
   );

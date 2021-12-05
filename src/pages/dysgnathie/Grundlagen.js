@@ -24,11 +24,11 @@ const Grundlagen = ({ grundlagen }) => {
 
         <div className="max-w-2xl">
           {
-            grundlagen.map((grundlage, index) => {
+            grundlagen.filter(grundlage => chapter === grundlage.chapter).map((grundlage, index) => {
               return (
                 <div key={index}>
-                  <h1>{chapter === grundlage.chapter && grundlage.chapter}</h1>
-                  <p>{chapter === grundlage.chapter && grundlage.content}</p>
+                  <h1>{grundlage.chapter}</h1>
+                  <p>{grundlage.content}</p>
                 </div>
               );
             })
