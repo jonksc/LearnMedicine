@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Topbar from '../../components/UI/Topbar';
 import Grundlagen from './Grundlagen';
+import Galerie from './Galerie';
+import Lernziele from './Lernziele';
+import Quiz from './Quiz';
 
 const Dysgnathie = () => {
+  const [aspect, setAspect] = useState('grundlagen');
+
+  const changeAspect = (event) => {
+    setAspect(event.target.value);
+  };
+
   const grundlagen = [
     {
       chapter: 'Allgemeines',
@@ -15,9 +25,26 @@ const Dysgnathie = () => {
 
   return (
     <div>
-      <Grundlagen
-        grundlagen={grundlagen}
+      <Topbar
+        aspect={aspect}
+        changeAspect={changeAspect}
       />
+      {aspect === 'grundlagen' &&
+        <Grundlagen
+          grundlagen={grundlagen}
+        />
+      }
+      {aspect === 'galerie' &&
+        <Galerie />
+      }
+
+      {aspect === 'quiz' &&
+        <Quiz />
+      }
+
+      {aspect === 'lernziele' &&
+        <Lernziele />
+      }
     </div>
   );
 };
