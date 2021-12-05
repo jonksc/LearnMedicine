@@ -1,7 +1,6 @@
 import React from 'react';
 import VideoJS from './VideoJs'; // point to where the functional component is stored
 
-// eslint-disable-next-line react/prop-types
 const VideoPlayer = ({ url }) => {
   const playerRef = React.useRef(null);
 

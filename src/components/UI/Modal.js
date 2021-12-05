@@ -4,7 +4,6 @@ import { Dialog, Transition } from '@headlessui/react';
 import { VideoCameraIcon } from '@heroicons/react/outline';
 import VideoPlayer from '../VideoPlayer/VideoPlayer';
 
-// eslint-disable-next-line react/prop-types
 function Modal({ show, onClose, title, url }) {
 
   const cancelButtonRef = useRef(null);
