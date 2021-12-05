@@ -15,11 +15,11 @@ const Quiz = ({ quizzes }) => {
       <div className="mb-2 text-xl">
         <p>Quiz waehlen:</p>
       </div>
-      <div>
+      <div className="flex flex-wrap gap-2">
         {
           quizzes.map((quiz, index) => {
             return (
-              <button key={index} onClick={changeQuizType} type="button" value={quiz.type} className="btn bg-green-500 hover:bg-green-700 text-white mr-2">
+              <button key={index} onClick={changeQuizType} type="button" value={quiz.type} className="btn bg-green-500 hover:bg-green-700 text-white">
                 {quiz.type}
               </button>
             );

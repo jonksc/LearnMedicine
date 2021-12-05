@@ -6,9 +6,9 @@ const Topbar = ({ changeAspect }) => {
 
   return (
     <div>
-      <div className="mb-5">
+      <div className="flex flex-wrap gap-2 mb-5">
         {
-          aspects.map((aspect, index) => <button key={index} className="btn btn-blue mr-2" value={aspect.toLowerCase()} onClick={changeAspect}>{aspect}</button>)
+          aspects.map((aspect, index) => <button key={index} className="btn btn-blue" value={aspect.toLowerCase()} onClick={changeAspect}>{aspect}</button>)
         }
       </div>
     </div>
