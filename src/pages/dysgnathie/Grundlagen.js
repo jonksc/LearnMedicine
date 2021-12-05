@@ -1,12 +1,14 @@
+/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import Topbar from '../../components/UI/Topbar';
 import Galerie from './Galerie';
 import Lernziele from './Lernziele';
 import Quiz from './Quiz';
 
-const Grundlagen = () => {
+// eslint-disable-next-line react/prop-types
+const Grundlagen = ({ grundlagen }) => {
   const [aspect, setAspect] = useState('grundlagen');
-  const [chapter, setChapter] = useState('allgemeines');
+  const [chapter, setChapter] = useState(grundlagen[0].chapter);
 
   const changeAspect = (event) => {
     setAspect(event.target.value);
@@ -15,8 +17,6 @@ const Grundlagen = () => {
   const changeChapter = (event) => {
     setChapter(event.target.value);
   };
-
-  const chapters = ['Allgemeines', 'Ursachen', 'Dysgnathieformen', 'Folgen', 'Diagnostik', 'Therapie'];
 
   return (
     <div>
@@ -31,23 +31,23 @@ const Grundlagen = () => {
           <hr />
           <div className="flex flex-col items-start">
             {
-              chapters.map((chapter, index) => 
-                <button key={index} onClick={changeChapter} value={chapter.toLowerCase()}>{chapter}</button>)
+              grundlagen.map((grundlage, index) => 
+                <button key={index} onClick={changeChapter} value={grundlage.chapter}>{grundlage.chapter}</button>)
             }
           </div>
         </div>
 
         <div className="max-w-2xl">
-          {chapter === 'allgemeines' &&
-          <>
-            <h1>Allgemeines</h1>
-            <p>Unter dem Begriff "Dysgnathie" werden zusammenfassend die Fehlentwicklungen der Zähne, des Kiefers und des Kausystems beschrieben.</p>
-          </>}
-          {chapter === 'ursachen' &&
-          <>
-            <h1>Ursachen</h1>
-            <p>Die Ursachen von Dysgnathien können sowohl skelettal, als auch dentoalveolär bedingt sein.</p>
-          </>}
+          {
+            grundlagen.map((grundlage, index) => {
+              return (
+                <div key={index}>
+                  <h1>{chapter === grundlage.chapter && grundlage.chapter}</h1>
+                  <p>{chapter === grundlage.chapter && grundlage.content}</p>
+                </div>
+              );
+            })
+          }
         </div>
       </div>
       }
