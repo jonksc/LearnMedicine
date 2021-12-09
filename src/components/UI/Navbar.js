@@ -10,8 +10,8 @@ const Navbar = ({ topic, changeTopic }) => {
           <DocumentTextIcon className="h-6 w-6 text-gray-700" aria-hidden="true" />
           <span className="text-xl">MKG Hauptvorlesung</span>
         </div>
-        <span className="flex align-middle">
-          <select className="mx-5" name="topics" id="topics" value={topic} onChange={changeTopic}>
+        <div>
+          <select className="mx-5 py-1 rounded-md" name="topics" id="topics" value={topic} onChange={changeTopic}>
             <option value="dysgnathie">Dysgnathie</option>
             <option value="entzuendungen_und_abszesse">Entzündungen und Abszesse</option>
             <option value='gesichtshauttumoren'>Gesichtshauttumoren</option>
@@ -31,7 +31,7 @@ const Navbar = ({ topic, changeTopic }) => {
             <option value='tumoren'>Tumoren</option>
             <option value='zysten'>Zysten</option>
           </select>
-        </span>
+        </div>
       </div>
     </nav>
   );

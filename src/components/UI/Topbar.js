@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Topbar = ({ changeAspect }) => {
+const Topbar = ({ aspect, changeAspect }) => {
 
   return (
     <div className="flex justify-center">
@@ -8,7 +8,7 @@ const Topbar = ({ changeAspect }) => {
         <span className="relative z-0 inline-flex shadow-sm rounded-md">
           <button
             type="button"
-            className="relative inline-flex items-center px-4 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-blue-400 focus:border-blue-400"
+            className={`relative inline-flex items-center px-4 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 ${aspect === 'grundlagen' && 'z-10 outline-none ring-1 ring-blue-500 border-blue-500'}`}
             value="grundlagen"
             onClick={changeAspect}
           >
@@ -16,7 +16,7 @@ const Topbar = ({ changeAspect }) => {
           </button>
           <button
             type="button"
-            className="-ml-px relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-blue-400 focus:border-blue-400"
+            className={`-ml-px relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 ${aspect === 'galerie' && 'z-10 outline-none ring-1 ring-blue-500 border-blue-500'}`}
             value="galerie"
             onClick={changeAspect}
           >
@@ -24,7 +24,7 @@ const Topbar = ({ changeAspect }) => {
           </button>
           <button
             type="button"
-            className="-ml-px relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-blue-400 focus:border-blue-400"
+            className={`-ml-px relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 ${aspect === 'quiz' && 'z-10 outline-none ring-1 ring-blue-500 border-blue-500'}`}
             value="quiz"
             onClick={changeAspect}
           >
@@ -32,7 +32,7 @@ const Topbar = ({ changeAspect }) => {
           </button>
           <button
             type="button"
-            className="-ml-px relative inline-flex items-center px-4 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-blue-400 focus:border-blue-400"
+            className={`-ml-px relative inline-flex items-center px-4 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 ${aspect === 'lernziele' && 'z-10 outline-none ring-1 ring-blue-500 border-blue-500'}`}
             value="lernziele"
             onClick={changeAspect}
           >
