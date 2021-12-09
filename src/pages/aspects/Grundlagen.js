@@ -10,13 +10,13 @@ const Grundlagen = ({ grundlagen }) => {
   return (
     <div>
       <div className="flex justify-start gap-20">
-        <div className="w-40">
+        <div className="w-56">
           <p>Kapitel</p>
           <hr />
           <div className="flex flex-col items-start">
             {
               grundlagen.map((grundlage, index) => 
-                <button key={index} onClick={changeChapter} value={grundlage.chapter}>{grundlage.chapter}</button>)
+                <button className="text-left btn" key={index} onClick={changeChapter} value={grundlage.chapter}>{grundlage.chapter}</button>)
             }
           </div>
         </div>

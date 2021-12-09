@@ -21,7 +21,23 @@ const Dysgnathie = () => {
     {
       chapter: 'Ursachen',
       content: 'Die Ursachen von Dysgnathien können sowohl skelettal, als auch dentoalveolär bedingt sein.'
-    }
+    },
+    {
+      chapter: 'Dysgnathieformen',
+      content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus sequi aliquam quia distinctio accusantium nobis illum. Porro, voluptates aspernatur? Perferendis sapiente adipisci nostrum porro esse, unde sequi beatae repellat illo.'
+    },
+    {
+      chapter: 'Folgen',
+      content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus sequi aliquam quia distinctio accusantium nobis illum. Porro, voluptates aspernatur? Perferendis sapiente adipisci nostrum porro esse, unde sequi beatae repellat illo.'
+    },
+    {
+      chapter: 'Diagnostik',
+      content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus sequi aliquam quia distinctio accusantium nobis illum. Porro, voluptates aspernatur? Perferendis sapiente adipisci nostrum porro esse, unde sequi beatae repellat illo.'
+    },
+    {
+      chapter: 'Therapie',
+      content: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus sequi aliquam quia distinctio accusantium nobis illum. Porro, voluptates aspernatur? Perferendis sapiente adipisci nostrum porro esse, unde sequi beatae repellat illo.'
+    },
   ];
 
   const quizzes = [

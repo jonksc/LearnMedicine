@@ -40,13 +40,9 @@ const VideoPlayer = ({ url }) => {
   // };
 
   return (
-    <>
-      <div>Rest of app here</div>
-
+    <div>
       <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
-
-      <div>Rest of app here</div>
-    </>
+    </div>
   );
 };
 

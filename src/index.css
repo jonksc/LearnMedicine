@@ -17,7 +17,7 @@ code {
 }
 
 .btn {
-  @apply px-2 py-1 font-bold rounded
+  @apply px-2 py-1 font-semibold rounded
 }
 
 .btn-blue {

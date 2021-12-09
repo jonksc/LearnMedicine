@@ -1,0 +1,29 @@
+{
+    "videos": [
+        {
+            "name": "Abszess",
+            "id": 0,
+            "host": "wms-avmz.klinikum.rwth-aachen.de",
+            "port": "443",
+            "path": "mkg",
+            "type": "mp4",
+            "file": "abszess.mp4",
+            "playbutton_poster": "avmzplayer/assets/Play_experimentell.png",
+            "poster": "entzuendungen_abszesse/images/video17.png",
+            "cuepoints" : [
+                {
+                    "id": 0,
+                    "time": 4,
+                    "duration": 0,
+                    "caption": "Einleitung"
+                },
+                {
+                    "id": 1,
+                    "time": 10,
+                    "duration": 0,
+                    "caption": "OP"
+                }
+            ]
+        }
+    ]
+}
