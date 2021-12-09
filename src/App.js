@@ -20,12 +20,12 @@ function App() {
       />
       <div className="max-w-5xl mx-auto px-5">
         {topic === 'dysgnathie' && <Dysgnathie />}
-        {topic === 'lkg' && <Lkg />}
         {topic === 'entzuendungen_und_abszesse' && <Entzuendungen_und_abszesse />}
         {topic === 'gesichtshauttumoren' && <Gesichtshauttumoren />}
         {topic === 'implantologie_und_epithetik' && <Lkg />}
         {topic === 'komplikationen' && <Lkg />}
         {topic === 'kraniosynostosen' && <Lkg />}
+        {topic === 'lkg' && <Lkg />}
         {topic === 'lokale_lappenplastiken' && <Lkg />}
         {topic === 'mikrochirurgie' && <Lkg />}
         {topic === 'mronj_und_orn' && <Lkg />}

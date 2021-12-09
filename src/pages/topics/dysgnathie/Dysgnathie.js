@@ -60,7 +60,7 @@ const Dysgnathie = () => {
   ];
 
   const lernziele = 
-  <tbody>
+  <>
     <tr><th>Kategorie</th><th>Lernzielbeschreibung</th><th>Verb</th><th>Kompetenzniveau</th><th>Literatur</th></tr>
     <tr><td>Grundlage</td><td>Der Studierende soll die Ursachen der Dysgnathien</td><td>erklären</td><td>kognitiv</td><td>"Zahn-, Mund und Kieferheilkunde" Schwenzer, Ehrenfeld, Thieme Verlag</td></tr>
     <tr><td>Grundlage</td><td>Der Studierende soll die Angle-Klassifikation</td><td>anwenden</td><td>psychomotorisch</td><td>"Zahn-, Mund und Kieferheilkunde" Schwenzer, Ehrenfeld, Thieme Verlag</td></tr>
@@ -71,7 +71,7 @@ const Dysgnathie = () => {
     <tr><td>Therapie</td><td>Der Studierende soll den Therapieplan einer Dysgnathie</td><td>erklären</td><td>kognitiv</td><td>"Zahn-, Mund und Kieferheilkunde" Schwenzer, Ehrenfeld, Thieme Verlag</td></tr>
     <tr><td>Therapie</td><td>Der Studierende soll die allgemeinen Grundlagen der orthognathen Chirurgie</td><td>benennen</td><td>kognitiv</td><td>"Zahn-, Mund und Kieferheilkunde" Schwenzer, Ehrenfeld, Thieme Verlag</td></tr>
     <tr><td>Therapie</td><td>Der Studierende soll die Grundlagen der chirurgischen Verfahren</td><td>erklären</td><td>kognitiv</td><td>"Zahn-, Mund und Kieferheilkunde" Schwenzer, Ehrenfeld, Thieme Verlag</td></tr>
-  </tbody>;
+  </>;
 
   return (
     <div>
