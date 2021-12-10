@@ -25,11 +25,8 @@ const Galerie = ({ data }) => {
   });
 
   // const urls = data.videos.map((video) => {
-  //   // eslint-disable-next-line quotes
   //   return `https://wms01-avmz.germanywestcentral.cloudapp.azure.com/mkg/_definst/mp4:${video.file}/playlist.m3u8`;
   // });
-
-  console.log(videoData);
 
   // const videoTitles = ['Bilaterale sagittale split Osteotomie', 'Unterkieferrückverlagerung'];
 

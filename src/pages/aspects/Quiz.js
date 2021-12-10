@@ -7,7 +7,6 @@ const Quiz = ({ quizzes }) => {
     setQuizType(event.target.value);
   };
 
-  console.log(!quizType);
 
   return (
     <div>
