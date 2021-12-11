@@ -8,9 +8,9 @@ const Grundlagen = ({ grundlagen }) => {
   };
 
   return (
-    <div>
-      <div className="flex justify-start gap-20">
-        <div className="w-56">
+    <>
+      <div className="flex flex-col gap-4 md:flex-row md:gap-20">
+        <div>
           <p className="font-semibold text-lg">Kapitel</p>
           <hr />
           <div className="flex flex-col items-start">
@@ -34,7 +34,7 @@ const Grundlagen = ({ grundlagen }) => {
           }
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
