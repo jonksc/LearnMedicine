@@ -17,7 +17,7 @@ const Quiz = ({ quizzes }) => {
         {
           quizzes.map((quiz, index) => {
             return (
-              <button key={index} onClick={changeQuizType} type="button" value={quiz.type} className="btn bg-green-500 hover:bg-green-700 text-white">
+              <button key={index} onClick={changeQuizType} type="button" value={quiz.type} className="btn bg-amber-500 hover:bg-amber-700 text-white">
                 {quiz.type}
               </button>
             );

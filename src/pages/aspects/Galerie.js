@@ -35,8 +35,8 @@ const Galerie = ({ data }) => {
   return (
     <div>
       <div className="mb-4">
-        <button className="btn bg-green-500 hover:bg-green-700 text-white mr-2" onClick={changeMediaType} value="videos">Videos</button>
-        <button className="btn bg-green-500 hover:bg-green-700 text-white mr-2" onClick={changeMediaType} value="bilder">Bilder</button>
+        <button className="btn bg-amber-500 hover:bg-amber-700 text-white mr-2" onClick={changeMediaType} value="videos">Videos</button>
+        <button className="btn bg-amber-500 hover:bg-amber-700 text-white mr-2" onClick={changeMediaType} value="bilder">Bilder</button>
       </div>
 
       
@@ -45,7 +45,7 @@ const Galerie = ({ data }) => {
           <>
             {videoData.map((video, index) =>
               <>
-                <button key={index} onClick={toggleModal} className="rounded-md px-2 py-2 bg-green-200 hover:bg-green-400 text-gray-800" value={video.url}>{video.title}</button>
+                <button key={index} onClick={toggleModal} className="rounded-md px-2 py-2 bg-amber-200 hover:bg-amber-400 text-gray-800" value={video.url}>{video.title}</button>
               </>)
             }
           </>
@@ -55,7 +55,7 @@ const Galerie = ({ data }) => {
           <>
             {pictureTitles.map((pictureTitle, index) =>
               <>
-                <button key={index} onClick={toggleModal} className="rounded-md px-2 py-1 bg-green-200 hover:bg-green-400 text-gray-800" value={pictureTitle}>{pictureTitle}</button>
+                <button key={index} onClick={toggleModal} className="rounded-md px-2 py-1 bg-amber-200 hover:bg-amber-400 text-gray-800" value={pictureTitle}>{pictureTitle}</button>
               </>)
             }
           </>

@@ -11,7 +11,7 @@ const Grundlagen = ({ grundlagen }) => {
     <div>
       <div className="flex justify-start gap-20">
         <div className="w-56">
-          <p>Kapitel</p>
+          <p className="font-semibold text-lg">Kapitel</p>
           <hr />
           <div className="flex flex-col items-start">
             {
@@ -26,7 +26,7 @@ const Grundlagen = ({ grundlagen }) => {
             grundlagen.filter(grundlage => chapter === grundlage.chapter).map((grundlage, index) => {
               return (
                 <div key={index}>
-                  <h1>{grundlage.chapter}</h1>
+                  <h1 className="font-semibold text-lg">{grundlage.chapter}</h1>
                   <p>{grundlage.content}</p>
                 </div>
               );

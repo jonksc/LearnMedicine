@@ -40,7 +40,7 @@ iframe {
 }
 
 th {
-  @apply px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider bg-gray-50
+  @apply px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider bg-gray-50
 }
 
 td {
