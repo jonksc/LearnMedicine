@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const Grundlagen = ({ grundlagen }) => {
   const [chapter, setChapter] = useState(grundlagen[0].chapter);

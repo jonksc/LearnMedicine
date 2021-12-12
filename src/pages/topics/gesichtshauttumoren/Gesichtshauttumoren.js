@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Topbar from '../../../components/UI/Topbar';
 import Grundlagen from '../../aspects/Grundlagen';
 import Galerie from '../../aspects/Galerie';

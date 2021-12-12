@@ -1,4 +1,4 @@
-import React, { Fragment, useRef } from 'react';
+import { Fragment, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import { Dialog, Transition } from '@headlessui/react';
 import { VideoCameraIcon } from '@heroicons/react/outline';

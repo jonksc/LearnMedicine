@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Navbar from './components/UI/Navbar';
 import Dysgnathie from './pages/topics/dysgnathie/Dysgnathie';
 import Entzuendungen_und_abszesse from './pages/topics/entzuendungen_und_abszesse/Entzuendungen_und_abszesse';
