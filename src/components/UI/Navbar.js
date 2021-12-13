@@ -1,5 +1,4 @@
 import { DocumentTextIcon } from '@heroicons/react/outline';
-import Dropdown from './Dropdown';
 
 const Navbar = ({ topic, changeTopic }) => {
 
