@@ -13,7 +13,7 @@ const Quiz = ({ quizzes }) => {
       <div className="mb-2 text-xl">
         <p>Quiz waehlen:</p>
       </div>
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-2 mb-3">
         {
           quizzes.map((quiz, index) => {
             return (
@@ -29,7 +29,7 @@ const Quiz = ({ quizzes }) => {
         quizzes.filter(quiz => quizType === quiz.type).map((quiz, index) => {
           return (
             <div key={index}>
-              <iframe width="100%" name={quiz.type} frameBorder="0" src={quiz.src}></iframe>
+              <iframe scrolling="no" width="100%" name={quiz.type} frameBorder="0" src={quiz.src}></iframe>
             </div>
           );
         })
