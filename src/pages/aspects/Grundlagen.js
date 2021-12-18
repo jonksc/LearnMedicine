@@ -11,23 +11,23 @@ const Grundlagen = ({ grundlagen }) => {
     <>
       <div className="flex flex-col gap-4 md:flex-row md:gap-20">
         <div>
-          <p className="font-semibold text-lg">Kapitel</p>
+          <p className="font-semibold text-slate-700 text-lg">Kapitel</p>
           <hr />
           <div className="flex flex-col items-start">
             {
               grundlagen.map((grundlage, index) => 
-                <button className="text-left btn" key={index} onClick={changeChapter} value={grundlage.chapter}>{grundlage.chapter}</button>)
+                <button className="text-left btn text-slate-700" key={index} onClick={changeChapter} value={grundlage.chapter}>{grundlage.chapter}</button>)
             }
           </div>
         </div>
 
-        <div className="max-w-2xl">
+        <div className="max-w-2xl prose prose-slate prose-p:text-slate-800 prose-ul:text-slate-800 prose-ol:text-slate-800">
           {
             grundlagen.filter(grundlage => chapter === grundlage.chapter).map((grundlage, index) => {
               return (
                 <div key={index}>
-                  <h1 className="font-semibold text-lg">{grundlage.chapter}</h1>
-                  <p>{grundlage.content}</p>
+                  <h1 className="font-semibold text-xl">{grundlage.chapter}</h1>
+                  {grundlage.content}
                 </div>
               );
             })
